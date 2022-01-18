@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel</title>
+</head>
+<body>
+    <h1>Quem é cara de tabaco?</h1>
+    Qual seu nome? <input type="nunber" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+
+    </div>
+    <script>
+    function verificar(){
+        var txtv= window.document.querySelector('input#txtvel')
+        var res=window.document.querySelector('div#res')
+        var vel=String(txtv)
+            res.innerHTML=(`<p> <strong> Você não é Cara de Tabaco</strong></p>`)
+            if(vel=='miguel'){
+            res.innerHTML += (`<p> <strong> Você é Cara de Tabaco</strong></p>`)
+        }
+
+    }
+    </script>
+    
+</body>
+</html>
