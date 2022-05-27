@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,19 +16,24 @@
         <h1>Exercicios HTML</h1>
     </header>
     <nav>
-        <a href="exercicios/teste.html">00 - Teste</a> |
-        <a href="exercicios/texto1.html">00 - Texto1</a> |
-        <a href="exercicios/texto2.html">00 - Texto2</a> |
+        <a href wm-nav="exercicios/teste.html">00 - Teste</a> |
+        <a href wm-nav="exercicios/texto1.html">01 - Texto1</a> |
+        <a href wm-nav="exercicios/texto2.html">02 - Texto2</a> |
+        <a href wm-nav="exercicios/listas.html">03 - Listas</a> |
+        <a href wm-nav="exercicios/listaAninhada.html">04 - Listas Aninhada</a> |
+        <a href wm-nav="exercicios/links.html">05 - Links</a> |
+        <a href wm-nav="exercicios/tabela.html">06 - Tabelas</a> |
+        <a href wm-nav="exercicios/form/form.html">07 - Formulario</a> |
     </nav>
     <section id="conteudo"></section>
     <footer>Curso de Web Moderno
     </footer>
     <script>
-        document.querySelectorAll('a').forEach(link => {
+        document.querySelectorAll('[wm-nav]').forEach(link => {
             link.onclick = function(e){
                 e.preventDefault()
                 const conteudo = document.getElementById('conteudo')
-                fetch(link.href)
+                fetch(link.getAttribute('wm-nav'))
                     .then(resp => resp.text())
                     .then(html => conteudo.innerHTML = html)
 
