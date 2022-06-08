@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }/* adicionei um elemento global para que a borda esteja sempre alinhada com a margem aberta  ---  (div - width-100%) - para deixar alinhado */
+    
+
         body {
             font-size: 45px;
+            margin: 0;
         }
+        
+        div {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px; 
+            border: solid 20px; 
+            /* box-sizing: border-box; */
+
+        }
+
     </style>
 </head>
 <body>

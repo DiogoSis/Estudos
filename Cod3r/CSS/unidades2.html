@@ -5,6 +5,26 @@
     <title>Unidades #02</title>
     <style>
         /* ... */
+        .fora {
+            position: relative;
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+
+        }
+
+        .dentro {
+            background-color: purple;
+            height: 100px;
+            width: 100%;
+            position: relative; /* tambem vai acupar somente o conteudo */
+            position: absolute; /* ele ocupa o conteudo mais o padding */
+            position: fixed; /* ele ocupa o tamanho de toda viewport */
+            position: static; /* posiçao estatica, vai respeitar apenas a posiçao do conteudo da classe */
+
+        }
+
     </style>
 </head>
 <body>
