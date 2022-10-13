@@ -18,9 +18,9 @@
             document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
         
         selecionar('div')        
-        deselecionar('*')
+        deselecionar('*') // * setetor universal
 
-        selecionar('.terceiro .ultimo')
+        selecionar('.terceiro .ultimo') // nao importando a ordem do id
 
        deselecionar('*')
        selecionar(':not(#primeiro)')
