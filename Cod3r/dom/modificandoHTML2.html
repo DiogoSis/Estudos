@@ -12,7 +12,14 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+       const div = document.querySelector('div')
+       div.innerHTML = 'Alterando o Texto' //susbtituindo o texto da div
+       //div.outerHTML = 'Alterando o texto 2' //substitui todo elemento pelo texto
+       div.insertAdjacentHTML('beforebegin', '<p>Estou Antes</p>') //antes de comecar a div coloque um HTML
+       div.insertAdjacentHTML('afterbegin', '<p>Estou Depois</p>') //depois de comecar a div coloque um HTML
+       div.insertAdjacentHTML('beforeend', '<p>Antes do Fim</p>') //Antes de finalizar a div coloque um HTML
+       div.insertAdjacentHTML('afterend','<p>No Final de tudo </p>')
+
     </script>
 </body>
 

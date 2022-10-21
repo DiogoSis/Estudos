@@ -9,7 +9,34 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body') 
+
+        const div1 = document.createElement('div')//criei uma div com elemento Element
+        div1.classList.add('destaque') //adicionei uma classe
+        div1.innerHTML = 'Primeiro' //coloquei o conteudo da div como texto PRIMEIRO
+       
+        //criando uma segunda div
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p)//adicionando o P ao ultimo filho com a função appenChild
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        //Metodo Inser before
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, div3.childNodes[0])
+
+        //criando um clone de um elemento
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4) //add div4
+        body.removeChild(div3) //removendo a div3, mas manterá a ordem das cores pelo CSS
     </script>
 </body>
 
