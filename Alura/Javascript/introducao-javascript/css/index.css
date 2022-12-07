@@ -108,7 +108,7 @@ button{
 	background-color:#0c8cd3;
 	border-color: #04324c;
 	width: 20%;
-    display: block;
+    display: flex;
     clear: both;
     margin: 10px 0px;
 
@@ -135,4 +135,16 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: lightcoral;
 
+}
+#mensagens-erro{
+	padding: 10px;
+	margin: 10px;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+}
+.fadeout{
+	opacity: 0;
+	transition: 0.5s;
+	
 }

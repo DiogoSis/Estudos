@@ -7,12 +7,32 @@ adicionar.addEventListener("click", function (event) {
 
     var pacienteTr = montaTr(paciente);
 
+    var erros = validaPaciente(paciente);
+
+    if(erros.length > 0){
+       exibeMensagemDeErro(erros) 
+        return;
+    }
+
     var tabela = document.querySelector('#tabela-pacientes');
     tabela.appendChild(pacienteTr);
 
     form.reset()
+    var mensagensDeErro = document.querySelector("#mensagens-erro")
+    mensagensDeErro.innerHTML = ""
 
 });
+
+function exibeMensagemDeErro(erros){
+
+    var ul = document.querySelector('#mensagens-erro');
+    ul.innerHTML = ""
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
 
 function pacienteFormulario(form) {
 
@@ -40,9 +60,39 @@ function montaTr(paciente) {
 }
 
 function montaTd(dado, classe) {
-    var td = document.createElement("td")
-    td.textContent = dado
-    td.classList.add(classe)
+    var td = document.createElement("td");
+    td.textContent = dado;
+    td.classList.add(classe);
+    return td;
+}
 
-    return td
+function validaPaciente(paciente){
+    var erros =[];
+
+    if(paciente.nome.length == 0){
+        erros.push("O Nome não pode ser em branco");
+    }
+
+    if(!validaPeso(paciente.peso)){
+        erros.push("Peso Inválido")     
+    }
+
+    if(!validaAltura(paciente.altura)){
+        erros.push("Altura Inválida")    
+    }
+
+    if(paciente.gordura.length == 0){
+        erros.push("favor preencher a porcentagem de gordura")
+    }
+
+    if(paciente.peso.length == 0){
+        erros.push("o peso nao pode ser em braco")
+    }
+
+    if(paciente.altura.length == 0){
+        erros.push("a altura nao pode ser em braco")
+    }
+
+
+    return erros;
 }
