@@ -6,6 +6,9 @@ for (var i = 0; i < pacientes.length; i++) {
 
     var paciente = pacientes[i]
 
+    var tdNome = paciente.querySelector(".info-nome");
+    var nome = tdNome.textContent
+
     var tdPeso = paciente.querySelector(".info-peso");
     var peso = tdPeso.textContent
 
