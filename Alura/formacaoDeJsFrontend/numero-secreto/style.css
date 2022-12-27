@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+
+:root{
+    --font-family:'Comic Neue', cursive;
+    --primary-color: #E5D9B6;
+    --bg-color:#285430 ;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+h3{
+    font-size: 2rem;
+    margin-top: 40px;
+}
+.mensagem{
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+.box{
+    border: 2px solid var(--primary-color);
+    display: inline-block;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 20px;
+}
+span{
+    font-weight: bold;
+
+}
+.fa-solid fa-arrow-up-1-9{
+    font-size: 50px;
+
+}
+
+.btn-jogar{
+    font-family: var(--font-family);
+    font-weight: bolder;
+    font-size: 2em;
+    padding: 8px 15px;
+    border: 0;
+    background: var(--primary-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: inset;
+}
