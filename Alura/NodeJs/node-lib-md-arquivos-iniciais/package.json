@@ -4,6 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "cli":"node ./src/cli.js ./arquivos/texto.md",
+    "cli:valida":"node ./src/cli.js ./arquivos/texto.md --valida",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
