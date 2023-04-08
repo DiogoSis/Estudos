@@ -1,8 +1,12 @@
-import {Negociacao} from './models/negociacao.js';
-
-const negociacao = new Negociacao (new Date(),10, 100);
+import { NegociacaoController } from "./controllers/negociacao-controller.js";
 
 
-console.log(negociacao.volume);
+const controller = new NegociacaoController();
+const form = document.querySelector('.form');
+form.addEventListener ('submit', event => {
 
+    //ingle page application, que é uma página que não recarrega durante o seu uso, eu preciso cancelar o evento padrão do formulário que é submissão, vou fazer: event.preventDefault();
+    event.preventDefault();
+    controller.adiciona();
+});
 
